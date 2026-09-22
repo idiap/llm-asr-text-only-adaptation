@@ -1,0 +1,58 @@
+version = 1
+
+# Vendored HuggingFace PEFT, extended for our previous work (idiap/llm-asr-prompt).
+# "aggregate" keeps the upstream copyright on every file, including the few we modified.
+[[annotations]]
+path = "peft/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Copyright 2023-present the HuggingFace Inc. team"
+SPDX-License-Identifier = "Apache-2.0"
+
+# Vendored SLAM-LLM framework (https://github.com/X-LANCE/SLAM-LLM).
+[[annotations]]
+path = "slam_llm/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Copyright (c) 2024 SLAM-LLM contributors"
+SPDX-License-Identifier = "MIT"
+
+# Files SLAM-LLM inherited from Meta's llama-recipes, which carry Llama 2 terms.
+[[annotations]]
+path = [
+  "slam_llm/data/__init__.py",
+  "slam_llm/data/concatenator.py",
+  "slam_llm/data/sampler.py",
+  "slam_llm/datasets/__init__.py",
+  "slam_llm/inference/__init__.py",
+  "slam_llm/inference/chat_utils.py",
+  "slam_llm/inference/safety_utils.py",
+  "slam_llm/policies/__init__.py",
+  "slam_llm/policies/activation_checkpointing_functions.py",
+  "slam_llm/policies/anyprecision_optimizer.py",
+  "slam_llm/policies/mixed_precision.py",
+  "slam_llm/policies/wrapping.py",
+  "slam_llm/utils/__init__.py",
+  "slam_llm/utils/checkpoint_handler.py",
+  "slam_llm/utils/fsdp_utils.py",
+  "slam_llm/utils/memory_utils.py",
+  "slam_llm/utils/train_utils.py"
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Copyright (c) Meta Platforms, Inc. and affiliates"
+SPDX-License-Identifier = "LicenseRef-Llama-2"
+
+# Figure 1 of the paper.
+[[annotations]]
+path = "batching.png"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Copyright © 2025 Idiap Research Institute <contact@idiap.ch>"
+SPDX-License-Identifier = "MIT"
+
+# Our domain partitions of the SlideSpeech corpus. These files carry utterance ids and
+# ground-truth transcripts derived from the corpus, which is distributed under CC BY-SA 4.0
+# (https://www.openslr.org/144/), so they inherit that license rather than ours. No audio
+# is redistributed here.
+[[annotations]]
+path = "data/slidespeech/**/*.jsonl"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "Copyright (c) 2023 SlideSpeech authors"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
