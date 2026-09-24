@@ -10,7 +10,7 @@ SPDX-License-Identifier: MIT
 
 This repo contains the code to reproduce our [Interspeech 2026 paper](https://www.isca-archive.org/interspeech_2026/burdisso26_interspeech.html) ([pdf](https://www.isca-archive.org/interspeech_2026/burdisso26_interspeech.pdf)).
 
-> [!TIP]
+> [!NOTE]
 > Looking for the code of our follow-up paper, [*Closing the Speech-Text Gap with Limited Audio for Effective Domain Adaptation in LLM-based ASR*](https://www.isca-archive.org/interspeech_2026/banerasroux26_interspeech.html)?
 > See the [README-speech-text-gap.md](README-speech-text-gap.md) file.
 
