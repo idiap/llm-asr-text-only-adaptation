@@ -10,6 +10,8 @@ SPDX-License-Identifier: MIT
 
 This page explains how to reproduce our follow-up [Interspeech 2026 paper](https://www.isca-archive.org/interspeech_2026/banerasroux26_interspeech.html) ([pdf](https://www.isca-archive.org/interspeech_2026/banerasroux26_interspeech.pdf)), *Closing the Speech-Text Gap with Limited Audio for Effective Domain Adaptation in LLM-based ASR*.
 It runs on exactly the same code as the [text-only adaptation paper](README.md) this repository was built for, so there is nothing extra to install: one more batch parameter, τ<sub>a</sub>, is all it takes.
+The Interspeech version has Figures 1 to 3; the [extended arXiv version](https://arxiv.org/pdf/2604.06487) adds an appendix with Figures 4 and 5, which repeat the Figure 2 comparison on the remaining domains.
+This page shows how to reproduce every figure from both versions.
 Read the [main README](README.md) first for installation, data preparation and the pipeline; this page only covers what is new.
 
 ## 💡 The idea: a little audio goes a long way
@@ -76,9 +78,9 @@ No new table folders are needed: every experiment reuses a base model from the f
 | 2a | Banking | DefinedAI B/I/H | [`scripts/table2/`](scripts/table2/) |
 | 2b, 2c | Agriculture, Musical Instruments | DefinedAI B/I/H | [`scripts/table4/`](scripts/table4/) |
 | 3 | Banking, source vs target WER | DefinedAI B/I/H | [`scripts/table2/`](scripts/table2/) |
-| 4a | Animation | DefinedAI B/I/H | [`scripts/table4/`](scripts/table4/) |
-| 4b | Insurance | DefinedAI B/I/H | [`scripts/table2/`](scripts/table2/) |
-| 5 | Agriculture, Animation, Musical Instruments | SlideSpeech L/T/E | [`scripts/table3/`](scripts/table3/) |
+| 4a (arXiv) | Animation | DefinedAI B/I/H | [`scripts/table4/`](scripts/table4/) |
+| 4b (arXiv) | Insurance | DefinedAI B/I/H | [`scripts/table2/`](scripts/table2/) |
+| 5 (arXiv) | Agriculture, Animation, Musical Instruments | SlideSpeech L/T/E | [`scripts/table3/`](scripts/table3/) |
 
 `TARGET_DOMAIN` takes `banking`, `insurance`, `agriculture`, `animation` or `musical_instruments`.
 
@@ -200,7 +202,7 @@ bash scripts/common/4.decode_TOA.sh
 
 Once the job finishes, `$D/WER.txt` holds the source-domain WER and `$D/target/WER.txt` the target one.
 
-### 6. Figures 4 and 5: the other domains
+### 6. Figures 4 and 5 (arXiv appendix): the other domains
 
 These repeat steps 3 and 4 with *p* ∈ {0.2, 0.4, 0.6, 0.8, 1.0}, for the remaining pairs of the [figure map](#-which-setup-reproduces-which-figure):
 
@@ -227,7 +229,7 @@ exp/<table>/TOA/prompt_llama/<domain>_tau_<tau_t>/epoch_5/WER.txt  # text only
 Word error rate (%) on the target test set, as plotted in the paper.
 MB is mixed-batch adaptation, ASR is standard fine-tuning on the same share *p* of target audio; at *p* = 0% MB is text-only adaptation and ASR is the base model.
 
-**Figure 2 and 4, DefinedAI source** ([`table2`](scripts/table2/) for B and I, [`table4`](scripts/table4/) for Ag, An and MI):
+**Figure 2 and 4 (arXiv), DefinedAI source** ([`table2`](scripts/table2/) for B and I, [`table4`](scripts/table4/) for Ag, An and MI):
 
 | Target | Method | *p* = 0% | 20% | 40% | 60% | 80% | 100% |
 |--------|--------|------:|----:|----:|----:|----:|-----:|
@@ -242,7 +244,7 @@ MB is mixed-batch adaptation, ASR is standard fine-tuning on the same share *p* 
 | Musical Instr. | ASR | 31.18 | 18.49 | 17.40 | 16.95 | 16.59 | **15.97** |
 | | **MB** | 25.82 | **16.97** | **16.38** | **15.46** | **15.87** | 16.97 |
 
-**Figure 5, SlideSpeech source** ([`table3`](scripts/table3/)):
+**Figure 5 (arXiv), SlideSpeech source** ([`table3`](scripts/table3/)):
 
 | Target | Method | *p* = 0% | 20% | 40% | 60% | 80% | 100% |
 |--------|--------|------:|----:|----:|----:|----:|-----:|
