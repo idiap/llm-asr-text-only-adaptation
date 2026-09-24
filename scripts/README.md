@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: Copyright © 2025 Idiap Research Institute <contact@idiap.ch>
+SPDX-FileCopyrightText: Copyright © 2025 Idiap Research Institute
 
 SPDX-License-Identifier: MIT
 -->
@@ -138,7 +138,7 @@ These control the batch composition.
 | `TOA_SIGMA_TA` | σ<sub>ta</sub> | `(noise_a(t), t)` | `null` | Source transcript, corrupted by the projector itself |
 | `TOA_SIGMA_T` | σ<sub>t</sub> | `(noise(t), t)` | `null` | Source transcript, corrupted synthetically |
 | `TOA_TAU_T` | τ | `(noise(t), t)` | per table | **Target** transcript, corrupted synthetically; this is what drives adaptation |
-| `TOA_TAU_A` | τ<sub>a</sub> | `(sp(a), t)` | `0.0` | Target-domain *audio*; 0 in every experiment in the paper |
+| `TOA_TAU_A` | τ<sub>a</sub> | `(sp(a), t)` | `0.0` | Target-domain *audio*; 0 in every experiment in the paper, used by the [follow-up paper](../README-speech-text-gap.md) |
 | `TOA_NOISE_TYPE` | | | `naive` | Noise function: `naive`, `random`, `echo` or `empty` |
 | `TOA_ENABLED` | | | `true` | `false` fine-tunes on target audio instead (the audio reference row) |
 

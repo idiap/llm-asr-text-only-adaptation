@@ -1,5 +1,5 @@
 #!/bin/bash
-# SPDX-FileCopyrightText: Copyright © 2025 Idiap Research Institute <contact@idiap.ch>
+# SPDX-FileCopyrightText: Copyright © 2025 Idiap Research Institute
 #
 # SPDX-License-Identifier: MIT
 #
