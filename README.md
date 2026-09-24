@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: Copyright © 2025 Idiap Research Institute <contact@idiap.ch>
+SPDX-FileCopyrightText: Copyright © 2025 Idiap Research Institute
 
 SPDX-License-Identifier: MIT
 -->
@@ -9,6 +9,10 @@ SPDX-License-Identifier: MIT
 > **Quick Links:** [The idea](#-the-idea-speech-recognition-as-text-denoising) · [Reproducing the paper](#-reproducing-the-paper) · [Expected results](#-expected-results) · [Scripts](scripts/README.md) · [Installation](#-installation) · [Citation](#-citation)
 
 This repo contains the code to reproduce our [Interspeech 2026 paper](https://www.isca-archive.org/interspeech_2026/burdisso26_interspeech.html) ([pdf](https://www.isca-archive.org/interspeech_2026/burdisso26_interspeech.pdf)).
+
+> [!TIP]
+> Looking for the code of our follow-up paper, [*Closing the Speech-Text Gap with Limited Audio for Effective Domain Adaptation in LLM-based ASR*](https://www.isca-archive.org/interspeech_2026/banerasroux26_interspeech.html)?
+> See the [README-speech-text-gap.md](README-speech-text-gap.md) file.
 
 ## 💡 The idea: Speech Recognition as Text Denoising
 
@@ -49,6 +53,14 @@ Check out [our paper](https://www.isca-archive.org/interspeech_2026/burdisso26_i
 The code here does more than reproduce the tables: every parameter is exposed as an environment variable, so you can change any part of the setup and try your own.
 Want to play with the batch proportions shown above, for instance?
 Those knobs are listed in [`scripts/README.md`](scripts/README.md#text-only-adaptation).
+
+### 🔊 What if you do have a little target-domain audio?
+
+Text alone still leaves a gap to fine-tuning on real target audio.
+Our [follow-up Interspeech 2026 paper](https://www.isca-archive.org/interspeech_2026/banerasroux26_interspeech.pdf) asks how much target audio it takes to close it.
+The answer: surprisingly little.
+Mixing just 10% of the target audio into these same batches matches or beats fine-tuning on all of it.
+See [README-speech-text-gap.md](README-speech-text-gap.md) to reproduce it with this code.
 
 ## 🚀 Installation
 
