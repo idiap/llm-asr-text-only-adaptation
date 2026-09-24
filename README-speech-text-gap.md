@@ -10,7 +10,7 @@ SPDX-License-Identifier: MIT
 
 This page explains how to reproduce our follow-up [Interspeech 2026 paper](https://www.isca-archive.org/interspeech_2026/banerasroux26_interspeech.html) ([pdf](https://www.isca-archive.org/interspeech_2026/banerasroux26_interspeech.pdf)), *Closing the Speech-Text Gap with Limited Audio for Effective Domain Adaptation in LLM-based ASR*.
 It runs on exactly the same code as the [text-only adaptation paper](README.md) this repository was built for, so there is nothing extra to install: one more batch parameter, τ<sub>a</sub>, is all it takes.
-The Interspeech version has Figures 1 to 3; the [extended arXiv version](https://arxiv.org/pdf/2604.06487) adds an appendix with Figures 4 and 5, which repeat the Figure 2 comparison on the remaining domains.
+The original Interspeech version has 3 Figures; **the [extended arXiv version](https://arxiv.org/pdf/2604.06487) adds an Appendix with two extra Figures, which repeat the Figure 2 comparison on the remaining domains.**
 This page shows how to reproduce every figure from both versions.
 Read the [main README](README.md) first for installation, data preparation and the pipeline; this page only covers what is new.
 
