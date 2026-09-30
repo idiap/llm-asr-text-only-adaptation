@@ -4,6 +4,16 @@ SPDX-FileCopyrightText: Copyright © 2025 Idiap Research Institute
 SPDX-License-Identifier: MIT
 -->
 
+<p align="center">
+  <a href="https://www.isca-archive.org/interspeech_2026/burdisso26_interspeech.html">
+    <img src="https://img.shields.io/badge/Interspeech-Paper-00629B?style=flat-square&logo=readthedocs&logoColor=white" alt="Interspeech Paper"/>
+  </a>
+  &nbsp;
+  <a href="https://docs.google.com/presentation/d/1po-qg_KxPtckIKU2p_6B-Qo_0XQcuWcUQMUzarv7ZCw/edit?usp=sharing">
+    <img src="https://img.shields.io/badge/Slides-Google%20Slides-FBBC04?style=flat-square&logo=google-slides&logoColor=white" alt="Slides"/>
+  </a>
+</p>
+
 # Avoiding Catastrophic Forgetting in Text-Only Adaptation of LLM-based ASR via Multi-View Text Denoising
 
 > **Quick Links:** [The idea](#-the-idea-speech-recognition-as-text-denoising) · [Reproducing the paper](#-reproducing-the-paper) · [Expected results](#-expected-results) · [Scripts](scripts/README.md) · [Installation](#-installation) · [Citation](#-citation)
